@@ -21,6 +21,9 @@ namespace Idea
             LongName = longName;
             HasValue = hasValue;
             Tip = tip;
+
+            ShortName = $"-{ShortName}";
+            LongName = $"--{LongName}";
         }
     }
 }
