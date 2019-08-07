@@ -7,7 +7,5 @@
 
         [Option("s", "seed-random-contractors", true, "Seeds random contractors with given value")]
         public int SeedRandomContractors { get; set; }
-
-        public int Something { get; set; }
     }
 }
