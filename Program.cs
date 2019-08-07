@@ -17,6 +17,8 @@ namespace Idea
                 Console.WriteLine("shut the fuck up");
             }
 
+            Console.WriteLine($"Seed amount: {options.SeedRandomContractors}");
+
             Console.ReadLine();
         }
     }
