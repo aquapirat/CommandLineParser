@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace Idea
 {
@@ -6,18 +7,13 @@ namespace Idea
     {
         private static void Main(string[] args)
         {
-            // Simulating args
-            var arguments = new[] { "--quiet-mode", "-s", "1000" };
-            var options = new CommandLineOptions();
+            var commandsManager = new CommandsManager();
+            var commands = commandsManager.GetCommands();
 
-            CommandLineOptionsParser.Parse(arguments, options);
-
-            if(options.QuietMode)
+            foreach (var command in commands)
             {
-                Console.WriteLine("shut the fuck up");
+                command.Value.DoAction();
             }
-
-            Console.WriteLine($"Seed amount: {options.SeedRandomContractors}");
 
             Console.ReadLine();
         }
