@@ -14,7 +14,7 @@ namespace Idea
 
             if(options.QuietMode)
             {
-                Console.WriteLine("shut the fuck up");
+                Console.WriteLine("shhh...");
             }
 
             Console.WriteLine($"Seed amount: {options.SeedRandomContractors}");
